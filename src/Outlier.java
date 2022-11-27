@@ -10,18 +10,18 @@ public class Outlier {
         int evenTotal = 0;
         int count = 0;
         int [] result = new int[arr.length - 1];
-        for (int i = 0; i < arr.length ; i++) {
-            if (arr[i] % 2 == 0)evenTotal +=1;
-            else oddTotal+=1;
+        for (int k : arr) {
+            if (k % 2 == 0) evenTotal += 1;
+            else oddTotal += 1;
         }
         if (oddTotal > evenTotal){
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] % 2 != 0)result[count++] = arr[i];
+            for (int j : arr) {
+                if (j % 2 != 0) result[count++] = j;
             }
         }
         else {
-            for (int i = 0; i < arr.length; i++) {
-                if (arr[i] %2 == 0)result[count++] = arr[i];
+            for (int j : arr) {
+                if (j % 2 == 0) result[count++] = j;
             }
         }
         return result;
